@@ -24,7 +24,7 @@ public abstract class DAO {
     protected ResultSet resultSet;
     
     protected void prepareConnection() {
-        connection = Database.getConnection(DBConfig.DB_URL,
+        connection = DatabaseUtils.getConnection(DBConfig.DB_URL,
                 DBConfig.USER_NAME,
                 DBConfig.PASSWORD);
     }

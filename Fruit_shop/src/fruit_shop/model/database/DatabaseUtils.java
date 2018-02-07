@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  *
  * @author TINH HUYNH
  */
-public class Database {
+public class DatabaseUtils {
 
     public static Connection getConnection(String dbURL, String userName,
             String password) {
@@ -25,7 +25,7 @@ public class Database {
             conn = DriverManager.getConnection(dbURL, userName, password);
             return conn;
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatabaseUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
         return conn;
     }
